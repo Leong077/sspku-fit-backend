@@ -1,1 +1,31 @@
+server:
+  port: 8080
 
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Lzp19980311!
+    url: jdbc:mysql://localhost:3306/sspku-fit?serverTimezone=UTC
+  redis:
+    host: localhost
+    port: 6379
+
+  servlet:
+    multipart:
+      max-request-size: 100MB
+      max-file-size: 50MB
+
+# Show sql
+logging:
+  level:
+    com:
+      example:
+        mapper: debug
+
+# PageHelper
+pagehelper:
+  reasonable: true
+  support-methods-arguments: true
+  page-size-zero: true
+  params: count=countSql
